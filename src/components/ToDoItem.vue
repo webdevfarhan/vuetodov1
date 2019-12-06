@@ -1,11 +1,10 @@
 <template>
-  <p>{{todo.title}}</p>
+  <p>{{ todo.title }} <button v-on:click="$emit('delete-todo', todo.id)">Delete</button></p>
 </template>
 
 <script>
 export default {
-  name: "ToDoItem",
-  props: ["todo"]
+  name: 'ToDoItem',
+  props: ['todo']
 };
 </script>
-
