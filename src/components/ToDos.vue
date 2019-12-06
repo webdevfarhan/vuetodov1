@@ -1,7 +1,5 @@
 <template>
   <div class="flexContainer">
-    <input type="text" placeholder="Add New Todo" />
-    <input type="submit" value="Submit" />
     <div v-bind:key="todo.id" v-for="todo in todos">
       <ToDoItem v-bind:todo="todo" />
     </div>
@@ -9,12 +7,12 @@
 </template>
 
 <script>
-import ToDoItem from "../components/ToDoItem";
+import ToDoItem from '../components/ToDoItem';
 export default {
-  name: "ToDos",
+  name: 'ToDos',
   components: {
     ToDoItem
   },
-  props: ["todos"]
+  props: ['todos']
 };
 </script>
